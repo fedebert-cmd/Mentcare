@@ -14,16 +14,18 @@ public class Patient {
     private long id;
     private String firstName;
     private String lastName;
-    private Date birthDate;
+    private String email;
+    private int age;
     private String birthPlace;
     private String nationality;
 
     protected Patient() {}
 
-    public Patient(String firstName, String lastName, Date birthDate, String birthPlace, String nationality) {
+    public Patient(String firstName, String lastName, String email, int age, String birthPlace, String nationality) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDate = birthDate;
+        this.email = email;
+        this.age = age;
         this.birthPlace = birthPlace;
         this.nationality = nationality;
     }
@@ -48,12 +50,18 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getBirthPlace() {

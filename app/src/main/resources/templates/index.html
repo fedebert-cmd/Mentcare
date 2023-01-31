@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentcare - Home</title>
+</head>
+<body>
+<h3 th:text="'Welcome doctor: ' + ${doctor.lastName} + ' ' + ${doctor.firstName}">Welcome</h3>
+<a href="list">Show Patient List</a>
+<a href="input">Create New Patient</a>
+<a href="prescription">Show Prescription List</a>
+</div>
+</body>
+</html>

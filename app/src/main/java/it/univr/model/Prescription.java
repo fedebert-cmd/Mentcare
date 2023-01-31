@@ -1,9 +1,6 @@
 package it.univr.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -11,57 +8,52 @@ public class Prescription {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private Doctor doctor;
-    private Drug drug;
-    private Patient patient;
-    private Date datePrescription;
+    @Column(unique = true, name = "ID_PRESCRIPTION")
+    private long idPrescription;
+
+    private String doctor;
+
+    private String drug;
+
+    private String patient;
+
     private String dosage;
 
     protected Prescription() {}
 
-    public Prescription(Doctor doctor, Drug drug, Patient patient, Date datePrescription, String dosage) {
+    public Prescription(String doctor, String drug, String patient, String dosage) {
         this.doctor = doctor;
         this.drug = drug;
         this.patient = patient;
-        this.datePrescription = datePrescription;
         this.dosage = dosage;
     }
 
-    public long getId() {
-        return id;
+    public long getIdPrescription() {
+        return idPrescription;
     }
 
-    public Doctor getDoctor() {
+    public String getDoctor() {
         return doctor;
     }
 
-    public void setDoctor(Doctor doctor) {
+    public void setDoctor(String doctor) {
         this.doctor = doctor;
     }
 
-    public Drug getDrug() {
+    public String getDrug() {
         return drug;
     }
 
-    public void setDrug(Drug drug) {
+    public void setDrug(String drug) {
         this.drug = drug;
     }
 
-    public Patient getPatient() {
+    public String getPatient() {
         return patient;
     }
 
-    public void setPatient(Patient patient) {
+    public void setPatient(String patient) {
         this.patient = patient;
-    }
-
-    public Date getDatePrescription() {
-        return datePrescription;
-    }
-
-    public void setDatePrescription(Date datePrescription) {
-        this.datePrescription = datePrescription;
     }
 
     public String getDosage() {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentcare - Prescription</title>
+</head>
+<body>
+<h1>Prescription List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Doctor</th>
+        <th>Patient</th>
+        <th>Drug</th>
+        <th>Dosage</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="prescription: ${prescription}">
+        <td th:text="${prescription.doctor}">Doctor</td>
+        <td th:text="${prescription.patient}">Patient</td>
+        <td th:text="${prescription.drug}">Drug</td>
+        <td th:text="${prescription.dosage}">Dosage</td>
+    </tr>
+    </tbody>
+</table>
+<a href="index">Homepage</a>
+</body>
+</html>
