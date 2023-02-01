@@ -90,6 +90,7 @@ public class MentcareController {
     public String edit(@RequestParam(name="id", required = true) Long id,
                        Model model) {
         Optional<Patient> result = patientRepository.findById(id);
+        if(result == null) return "error";
         Patient patient = result.get();
         model.addAttribute("patient", patient);
         return "edit";
@@ -105,6 +106,7 @@ public class MentcareController {
                          @RequestParam(name="nationality", required = true) String nationality,
                          Model model) {
         Optional<Patient> result = patientRepository.findById(id);
+        if(result == null) return "error";
         patientRepository.delete(result.get());
         Patient patient = new Patient(firstname, lastname, email, age, birthplace, nationality);
         patientRepository.save(patient);
@@ -115,6 +117,7 @@ public class MentcareController {
     public String delete(@RequestParam(name="id", required = true) Long id,
                          Model model) {
         Optional<Patient> result = patientRepository.findById(id);
+        if(result == null) return "error";
         patientRepository.delete(result.get());
         return "redirect:/list";
     }
