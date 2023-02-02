@@ -8,9 +8,9 @@ public class PrescriptionPO extends PageObject{
     public PrescriptionPO(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "/html/body/h1")
+    @FindBy(xpath = "/html/body/div/h1")
     private WebElement header;
-    @FindBy(xpath = "/html/body/a")
+    @FindBy(xpath = "/html/body/div/a")
     private WebElement buttonHome;
     public String confirmationHeader() {
         return header.getText();

@@ -8,13 +8,13 @@ public class IndexPO extends PageObject{
     public IndexPO(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "/html/body/h1")
+    @FindBy(xpath = "/html/body/div/h1")
     private WebElement header;
-    @FindBy(xpath = "/html/body/a[1]")
+    @FindBy(xpath = "/html/body/div/div/div[1]/a")
     private WebElement buttonShowPatientList;
-    @FindBy(xpath = "/html/body/a[2]")
+    @FindBy(xpath = "/html/body/div/div/div[2]/a")
     private WebElement buttonCreateNewPatient;
-    @FindBy(xpath = "/html/body/a[3]")
+    @FindBy(xpath = "/html/body/div/div/div[3]/a")
     private WebElement buttonShowPrescriptionList;
 
     public String confirmationHeader() {

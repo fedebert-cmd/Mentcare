@@ -8,21 +8,21 @@ public class EditPO extends PageObject{
     public EditPO(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "/html/body/h1")
+    @FindBy(xpath = "/html/body/div/h1")
     private WebElement header;
-    @FindBy(xpath = "/html/body/form/input[2]")
+    @FindBy(xpath = "/html/body/div/div/form/input[2]")
     private WebElement firstName;
-    @FindBy(xpath = "/html/body/form/input[3]")
+    @FindBy(xpath = "/html/body/div/div/form/input[3]")
     private WebElement lastName;
-    @FindBy(xpath = "/html/body/form/input[4]")
+    @FindBy(xpath = "/html/body/div/div/form/input[4]")
     private WebElement email;
-    @FindBy(xpath = "/html/body/form/input[5]")
+    @FindBy(xpath = "/html/body/div/div/form/input[5]")
     private WebElement age;
-    @FindBy(xpath = "/html/body/form/input[6]")
+    @FindBy(xpath = "/html/body/div/div/form/input[6]")
     private WebElement birthPlace;
-    @FindBy(xpath = "/html/body/form/input[7]")
+    @FindBy(xpath = "/html/body/div/div/form/input[7]")
     private WebElement nationality;
-    @FindBy(xpath = "/html/body/form/input[8]")
+    @FindBy(xpath = "/html/body/div/div/form/input[8]")
     private WebElement submitButton;
 
     public String confirmationHeader() {

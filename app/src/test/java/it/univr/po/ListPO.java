@@ -8,37 +8,37 @@ public class ListPO extends PageObject{
     public ListPO(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "/html/body/h1")
+    @FindBy(xpath = "/html/body/div/h1")
     private WebElement header;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[1]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[1]")
     private WebElement firstName1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[2]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[2]")
     private WebElement lastName1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[3]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[3]")
     private WebElement email1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[4]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[4]")
     private WebElement age1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[5]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[5]")
     private WebElement birthPlace1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[1]/td[6]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[2]/td[6]")
     private WebElement nationality1;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[1]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[1]")
     private WebElement firstName2;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[2]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[2]")
     private WebElement lastName2;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[3]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[3]")
     private WebElement email2;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[4]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[4]")
     private WebElement age2;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[5]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[5]")
     private WebElement birthPlace2;
-    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td[6]")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr[3]/td[6]")
     private WebElement nationality2;
-    @FindBy(xpath = "/html/body/table/tbody/tr/td[7]/a")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr/td[7]/a")
     private WebElement buttonEdit;
-    @FindBy(xpath = "/html/body/table/tbody/tr/td[8]/a")
+    @FindBy(xpath = "/html/body/div/table/tbody/tr/td[8]/a")
     private WebElement buttonDelete;
-    @FindBy(xpath = "/html/body/a")
+    @FindBy(xpath = "/html/body/div/a")
     private WebElement buttonHome;
     public String confirmationHeader() {
         return header.getText();
