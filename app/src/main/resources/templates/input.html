@@ -3,16 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Mentcare - New Patient</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/static/common.css">
 </head>
-<h1>Create new Patient</h1>
-<form action="create" method="post">
-  Name:<input type="text" name="firstname"><br>
-  Surname:<input type="text" name="lastname"><br>
-  Email:<input type="text" name="email"><br>
-  Age:<input type="text" name="age"><br>
-  BirthPlace:<input type="text" name="birthplace"><br>
-  Nationality:<input type="text" name="nationality"><br>
-  <input type="submit" />
-</form>
+<body>
+<div class="div-main">
+<h1 class="h1-main">Create new Patient</h1>
+  <div class="div-form">
+    <form action="create" method="post">
+      <label for="fname">FirstName</label>
+      <input type="text" id="fname" name="firstname">
+
+      <label for="lname">LastName</label>
+      <input type="text" id="lname" name="lastname">
+
+      <label for="mail">Email</label>
+      <input type="text" id="mail" name="email">
+
+      <label for="age">Age</label>
+      <input type="text" id="age" name="age">
+
+      <label for="bplace">BirthPlace</label>
+      <input type="text" id="bplace" name="birthplace">
+
+      <label for="nat">Nationality</label>
+      <input type="text" id="nat" name="nationality">
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+</div>
 </body>
 </html>

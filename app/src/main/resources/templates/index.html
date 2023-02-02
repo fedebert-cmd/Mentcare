@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Mentcare - Home</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/static/common.css">
 </head>
 <body>
-<h1 th:text="'Welcome doctor: ' + ${doctor.lastName} + ' ' + ${doctor.firstName}">Welcome</h1>
-<a href="list">Show Patient List</a>
-<a href="input">Create New Patient</a>
-<a href="prescription">Show Prescription List</a>
+<div class="div-main">
+  <h1 class="h1-main" th:text="'Welcome doctor: ' + ${doctor.lastName} + ' ' + ${doctor.firstName}">Welcome</h1>
+  <div class="div-index-row">
+    <div class="div-index-column">
+      <a href="list" class="div-index-row-a"><img src="/img/patient-list.png" style="width:60%"></a>
+      <p class="div-index-p">Show Patient List</p>
+    </div>
+    <div class="div-index-column">
+      <a href="input" class="div-index-row-a"><img src="/img/new-patient.png" style="width:60%"></a>
+      <p class="div-index-p">Create New Patient</p>
+    </div>
+    <div class="div-index-column">
+      <a href="prescription" class="div-index-row-a"><img src="/img/prescription.png" style="width:60%"></a>
+      <p class="div-index-p">Show Prescription List</p>
+    </div>
+  </div>
 </div>
 </body>
 </html>

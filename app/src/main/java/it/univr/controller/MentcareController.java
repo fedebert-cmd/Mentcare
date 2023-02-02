@@ -40,12 +40,16 @@ public class MentcareController {
             doctorRepository.save(doctor);
             Patient patient = new Patient("Luca", "Verdi", "luca.verdi@patient.it", 64, "Verona", "Italia");
             patientRepository.save(patient);
+            Patient patient1 = new Patient("Andrea", "Bianchi", "andrea.bianchi@patient.it", 38, "Torino", "Italia");
+            patientRepository.save(patient1);
             Drug drug1 = new Drug("drug1");
             drugRepository.save(drug1);
             Drug drug2 = new Drug("drug2");
             drugRepository.save(drug2);
             Prescription prescription = new Prescription(doctor.getEmail(), drug1.getName(), patient.getEmail(), "50mg");
             prescriptionRepository.save(prescription);
+            Prescription prescription1 = new Prescription(doctor.getEmail(), drug2.getName(), patient1.getEmail(), "30mg");
+            prescriptionRepository.save(prescription1);
         }
     }
 

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Mentcare - List Patient</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/common.css">
 </head>
 <body>
-<h1>Patient List</h1>
+<div class="div-main">
+<h1 class="h1-main">Patient List</h1>
 <table>
     <thead>
     <tr>
@@ -15,6 +18,8 @@
         <th>Age</th>
         <th>BirthPlace</th>
         <th>Nationality</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -25,11 +30,12 @@
         <td th:text="${patient.age}"> Age </td>
         <td th:text="${patient.birthPlace}"> BirthPlace </td>
         <td th:text="${patient.nationality}"> Nationality </td>
-        <td> <a href="edit" th:href="@{edit(id=${patient.id})}"> Edit </a></td>
-        <td> <a href="delete" th:href="@{delete(id=${patient.id})}"> Delete </a></td>
+        <td> <a href="edit" th:href="@{edit(id=${patient.id})}" style="color: #5c3c92"> Edit </a></td>
+        <td> <a href="delete" th:href="@{delete(id=${patient.id})}" style="color: #5c3c92"> Delete </a></td>
     </tr>
     </tbody>
 </table>
-<a href="index">Homepage</a>
+<a href="index" class="btn-home">Homepage</a>
+</div>
 </body>
 </html>

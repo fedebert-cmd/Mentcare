@@ -3,18 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Mentcare - Edit Patient</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/static/common.css">
 </head>
 <body>
-<h1>Edit a Patient</h1>
-<form action="update" method="post">
-  <input type="hidden" name="id" th:value="${patient.id}"> <br>
-  Name:<input type="text" name="firstname" th:value="${patient.firstName}"><br>
-  Surname:<input type="text" name="lastname" th:value="${patient.lastName}"><br>
-  Email:<input type="text" name="email" th:value="${patient.email}"><br>
-  Age:<input type="text" name="age" th:value="${patient.age}"><br>
-  BirthPlace:<input type="text" name="birthplace" th:value="${patient.birthPlace}"><br>
-  Nationality:<input type="text" name="nationality" th:value="${patient.nationality}"><br>
-  <input type="submit" />
-</form>
+<div class="div-main">
+<h1 class="h1-main">Edit a Patient</h1>
+  <div class="div-form">
+    <form action="update" method="post">
+      <input type="hidden" name="id" th:value="${patient.id}"> <br>
+
+      <label for="fname">FirstName</label>
+      <input type="text" id="fname" name="firstname" th:value="${patient.firstName}">
+
+      <label for="lname">LastName</label>
+      <input type="text" id="lname" name="lastname" th:value="${patient.lastName}">
+
+      <label for="mail">Email</label>
+      <input type="text" id="mail" name="email" th:value="${patient.email}">
+
+      <label for="age">Age</label>
+      <input type="text" id="age" name="age" th:value="${patient.age}">
+
+      <label for="bplace">BirthPlace</label>
+      <input type="text" id="bplace" name="birthplace" th:value="${patient.birthPlace}">
+
+      <label for="nat">Nationality</label>
+      <input type="text" id="nat" name="nationality" th:value="${patient.nationality}">
+
+      <input type="submit" value="Edit"/>
+    </form>
+  </div>
+</div>
 </body>
 </html>
